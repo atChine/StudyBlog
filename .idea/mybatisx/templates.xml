@@ -62,8 +62,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Category" />
-                  <option name="tableName" value="sg_category" />
+                  <option name="className" value="Link" />
+                  <option name="tableName" value="sg_link" />
                 </TableUIInfo>
               </list>
             </option>

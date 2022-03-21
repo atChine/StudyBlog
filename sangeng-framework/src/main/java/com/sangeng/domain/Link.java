@@ -7,16 +7,14 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 /**
- * 文章表
- * @TableName sg_article
+ * 友链
+ * @TableName sg_link
  */
-@TableName(value ="sg_article")
+@TableName(value ="sg_link")
 @Data
-@Accessors(chain = true)
-public class Article implements Serializable {
+public class Link implements Serializable {
     /**
      * 
      */
@@ -24,54 +22,29 @@ public class Article implements Serializable {
     private Long id;
 
     /**
-     * 标题
+     * 
      */
-    private String title;
+    private String name;
 
     /**
-     * 文章内容
+     * 
      */
-    private String content;
+    private String logo;
 
     /**
-     * 文章摘要
+     * 描述
      */
-    private String summary;
+    private String description;
 
     /**
-     * 所属分类id
+     * 网站地址
      */
-    private Long categoryId;
-    /**
-     * 所属分类Name
-     */
-    @TableField(exist = false)
-    private String categoryName;
+    private String address;
 
     /**
-     * 缩略图
-     */
-    private String thumbnail;
-
-    /**
-     * 是否置顶（0否，1是）
-     */
-    private String isTop;
-
-    /**
-     * 状态（0已发布，1草稿）
+     * 审核状态 (0代表审核通过，1代表审核未通过，2代表未审核)
      */
     private String status;
-
-    /**
-     * 访问量
-     */
-    private Long viewCount;
-
-    /**
-     * 是否允许评论 1是，0否
-     */
-    private String isComment;
 
     /**
      * 
