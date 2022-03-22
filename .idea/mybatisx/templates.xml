@@ -13,7 +13,7 @@
             <option name="extraClassSuffix" value="" />
             <option name="ignoreFieldPrefix" value="" />
             <option name="ignoreFieldSuffix" value="" />
-            <option name="ignoreTablePrefix" value="sg_" />
+            <option name="ignoreTablePrefix" value="" />
             <option name="ignoreTableSuffix" value="" />
             <option name="moduleName" value="sangeng-framework" />
             <option name="modulePath" value="$PROJECT_DIR$/sangeng-framework" />
@@ -62,8 +62,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Link" />
-                  <option name="tableName" value="sg_link" />
+                  <option name="className" value="SysUser" />
+                  <option name="tableName" value="sys_user" />
                 </TableUIInfo>
               </list>
             </option>
