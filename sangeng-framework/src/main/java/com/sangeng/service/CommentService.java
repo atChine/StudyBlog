@@ -12,12 +12,14 @@ import com.sangeng.result.ResponseResult;
 public interface CommentService extends IService<Comment> {
     /**
      * 查询评论列表
+     *
+     * @param articleComment
      * @param articleId 文章ID
      * @param pageNum
      * @param pageSize
      * @return
      */
-    ResponseResult commentList(Long articleId, Integer pageNum, Integer pageSize);
+    ResponseResult commentList(String articleComment, Long articleId, Integer pageNum, Integer pageSize);
 
     /**
      * 实现评论功能
