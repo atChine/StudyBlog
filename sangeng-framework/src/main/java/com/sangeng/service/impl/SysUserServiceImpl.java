@@ -72,7 +72,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser>
         if(emailExist(user.getEmail())){
             throw new SystemException(AppHttpCodeEnum.EMAIL_EXIST);
         }
-        //...
         //对密码进行加密
         String encodePassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodePassword);

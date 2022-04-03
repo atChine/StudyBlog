@@ -67,6 +67,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
         articleList.stream()
                 .map(article -> article.setCategoryName(categoryService.getById(article.getCategoryId()).getName()))
                 .collect(Collectors.toList());
+                //.map(article -> article.setCategoryName(categoryService.getById(article.getCategoryId()).getName()))
+                //.collect(Collectors.toList());
         //封装查询结果
         List<ArticleListVo> articleListVo = BeanCopyUtils.copyBeanList(articleList, ArticleListVo.class);
         PageVo pageVo = new PageVo(articleListVo, page.getTotal());
@@ -81,6 +83,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
         Category category = categoryService.getById(categoryId);
         if (category != null){
             articleDetailVo.setCategoryName(category.getName());
+        }else {
+            articleDetailVo.setCategoryName("此用户以注销");
         }
         return ResponseResult.okResult(articleDetailVo);
     }
